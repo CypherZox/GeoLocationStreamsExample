@@ -35,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Geolocator.getPositionStream().handleError((error) {});
       locationSubscription = positionStream.listen((Position position) {
         _locStream.sink.add(position);
+
         if (textColor == Colors.blue) {
           textColor = Colors.red;
         } else {
